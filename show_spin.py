@@ -1,4 +1,4 @@
-from spin_TF import *
+from spin_mag import *
 
 dim = 100
 

@@ -15,10 +15,11 @@ fig, ax1 = plt.subplots()
 
 ax2 = ax1.twinx()
 ax1.plot(T_s_1, E_s_1/1000, 'g-')
-ax2.plot(T_s_1, S_s_1/1000, 'b-')
+ax2.plot(T_s_1, -S_s_1/1000, 'b-')
 
 ax1.set_xlabel('T')
 ax1.set_ylabel('<E>', color='g')
 ax2.set_ylabel('<S>', color='b')
-
+plt.text(-0.1, 9.7, r'$1\mathrm{e}3$')
+plt.text(3.8, 9.7, r'$1\mathrm{e}3$')
 plt.show()
