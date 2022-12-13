@@ -13,7 +13,7 @@ def T_F_int(T, F):
 		return -1
 
 # implement field
-
+@njit
 def E_grid(grid, H):
 	l = len(grid)-1
 	J = 1
@@ -50,11 +50,11 @@ def S_grid(grid):
 
 def kappa(grid, T):
 	N = len(grid)
-	return (N**4 - S_grid(grid)**2)/N/T
+	return (N**4 - S_grid(grid)**2)/N**2/T
 
 def c_heat(grid, T, H):
 	N = len(grid)
-	return ((4+H)**2 * N**4 - E_grid(grid, H)**2)/T**2/N
+	return ((4+H)**2 * N**4 - E_grid(grid, H)**2)/T**2/N**2
 
 
 @njit
